@@ -54,7 +54,7 @@ public class AddEditExpensesActivity extends AppCompatActivity {
 
                 updateCalendar();
             }
-
+            //for date picker
             private void updateCalendar(){
                 String format = "MM/dd/yyyy";
                 SimpleDateFormat sdf = new SimpleDateFormat(format, Locale.FRANCE);

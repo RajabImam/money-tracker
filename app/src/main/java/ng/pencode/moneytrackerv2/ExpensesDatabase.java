@@ -9,6 +9,7 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
+//version specify for migration purpose and when schema changes
 @Database(entities = {Expenses.class}, version = 1)
 public abstract  class ExpensesDatabase extends RoomDatabase {
     private static ExpensesDatabase instance;
@@ -37,7 +38,7 @@ public abstract  class ExpensesDatabase extends RoomDatabase {
     };
     private static class PopulateDBAsyncTask extends AsyncTask<Void, Void, Void>{
         ExpensesDao expensesDao;
-
+        //Just populating sample data for the first time the database is created and happens only once
         private PopulateDBAsyncTask(ExpensesDatabase db){
             expensesDao = db.expensesDao();
         }
